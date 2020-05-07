@@ -39,8 +39,7 @@ class MyApp extends StatelessWidget {
                   locale: languageProviderRef.appLocale,
                   //List of all supported locales
                   supportedLocales: [
-                    Locale('en', 'US'),
-                    Locale('zh', 'CN'),
+                    Locale('en', 'US')
                   ],
                   //These delegates make sure that the localization data for the proper language is loaded
                   localizationsDelegates: [
@@ -81,8 +80,13 @@ class MyApp extends StatelessWidget {
                             : SignInScreen();
                       }
 
+//                      return Material(
+//                        child: CircularProgressIndicator(),
+//                      );
                       return Material(
-                        child: CircularProgressIndicator(),
+                        child: Container(
+                          color: Colors.red,
+                        ),
                       );
                     },
                   ),
