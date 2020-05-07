@@ -11,5 +11,4 @@ class UserModel {
       this.displayName,
       this.phoneNumber,
       this.photoUrl});
-
 }

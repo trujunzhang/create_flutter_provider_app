@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:provider/provider.dart';
 import 'package:ieatta/flavor.dart';
 import 'package:ieatta/my_app.dart';
 import 'package:ieatta/src/providers/auth_provider.dart';
 import 'package:ieatta/src/providers/language_provider.dart';
 import 'package:ieatta/src/providers/theme_provider.dart';
 import 'package:ieatta/src/services/firestore_database.dart';
+import 'package:provider/provider.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();

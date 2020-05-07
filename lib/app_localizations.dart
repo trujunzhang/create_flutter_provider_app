@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -15,7 +16,8 @@ class AppLocalizations {
   }
 
   //This is the static member for allowing simple access to the delegate from the MaterialApp
-  static const LocalizationsDelegate<AppLocalizations> delegate = _AppLocalizationsDelegate();
+  static const LocalizationsDelegate<AppLocalizations> delegate =
+      _AppLocalizationsDelegate();
 
   Map<String, String> _localizedStrings;
 
@@ -34,9 +36,8 @@ class AppLocalizations {
 
   // This method will be called from every widgets which needs a localized text
   String translate(String key) {
-    return _localizedStrings[key]??key;
+    return _localizedStrings[key] ?? key;
   }
-
 }
 
 // LocalizationsDelegate is a factory for a set of localized resources

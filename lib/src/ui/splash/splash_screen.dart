@@ -1,4 +1,5 @@
 import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:ieatta/app_localizations.dart';
 import 'package:ieatta/routes.dart';
@@ -25,7 +26,7 @@ class _SplashScreenState extends State<SplashScreen> {
       children: <Widget>[
         Center(
             child: Text(
-              AppLocalizations.of(context).translate("splashTitle"),
+          AppLocalizations.of(context).translate("splashTitle"),
           style: TextStyle(
             fontSize: Theme.of(context).textTheme.headline.fontSize,
           ),

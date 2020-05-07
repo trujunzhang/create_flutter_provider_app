@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:ieatta/app_localizations.dart';
 import 'package:ieatta/auth_widget_builder.dart';
-import 'package:ieatta/src/constants/app_themes.dart';
 import 'package:ieatta/flavor.dart';
+import 'package:ieatta/routes.dart';
+import 'package:ieatta/src/constants/app_themes.dart';
 import 'package:ieatta/src/models/user_model.dart';
 import 'package:ieatta/src/providers/auth_provider.dart';
 import 'package:ieatta/src/providers/language_provider.dart';
 import 'package:ieatta/src/providers/theme_provider.dart';
-import 'package:ieatta/routes.dart';
 import 'package:ieatta/src/services/firestore_database.dart';
 import 'package:ieatta/src/ui/auth/sign_in_screen.dart';
 import 'package:ieatta/src/ui/home/home.dart';
 import 'package:provider/provider.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({Key key, this.databaseBuilder}) : super(key: key);

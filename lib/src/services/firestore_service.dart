@@ -1,5 +1,5 @@
-import 'package:meta/meta.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:meta/meta.dart';
 
 /*
 This class represent all possible CRUD operation for Firestore.
@@ -9,6 +9,7 @@ documentID and path for any document and collections.
  */
 class FirestoreService {
   FirestoreService._();
+
   static final instance = FirestoreService._();
 
   Future<void> setData({

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
+import 'package:ieatta/app_localizations.dart';
+import 'package:ieatta/routes.dart';
 import 'package:ieatta/src/models/user_model.dart';
 import 'package:ieatta/src/providers/auth_provider.dart';
-import 'package:ieatta/routes.dart';
-import 'package:ieatta/app_localizations.dart';
+import 'package:provider/provider.dart';
 
 class RegisterScreen extends StatefulWidget {
   @override
@@ -68,14 +68,17 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 TextFormField(
                   controller: _emailController,
                   style: Theme.of(context).textTheme.body1,
-                  validator: (value) =>
-                      value.isEmpty ? AppLocalizations.of(context).translate("loginTxtErrorEmail") : null,
+                  validator: (value) => value.isEmpty
+                      ? AppLocalizations.of(context)
+                          .translate("loginTxtErrorEmail")
+                      : null,
                   decoration: InputDecoration(
                       prefixIcon: Icon(
                         Icons.email,
                         color: Theme.of(context).iconTheme.color,
                       ),
-                      labelText: AppLocalizations.of(context).translate("loginTxtEmail"),
+                      labelText: AppLocalizations.of(context)
+                          .translate("loginTxtEmail"),
                       border: OutlineInputBorder()),
                 ),
                 Padding(
@@ -86,14 +89,16 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     controller: _passwordController,
                     style: Theme.of(context).textTheme.body1,
                     validator: (value) => value.length < 6
-                        ? AppLocalizations.of(context).translate("loginTxtErrorPassword")
+                        ? AppLocalizations.of(context)
+                            .translate("loginTxtErrorPassword")
                         : null,
                     decoration: InputDecoration(
                         prefixIcon: Icon(
                           Icons.lock,
                           color: Theme.of(context).iconTheme.color,
                         ),
-                        labelText: AppLocalizations.of(context).translate("loginTxtPassword"),
+                        labelText: AppLocalizations.of(context)
+                            .translate("loginTxtPassword"),
                         border: OutlineInputBorder()),
                   ),
                 ),
@@ -103,7 +108,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       )
                     : RaisedButton(
                         child: Text(
-                          AppLocalizations.of(context).translate("loginBtnSignUp"),
+                          AppLocalizations.of(context)
+                              .translate("loginBtnSignUp"),
                           style: Theme.of(context).textTheme.button,
                         ),
                         onPressed: () async {
@@ -118,7 +124,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
 
                             if (userModel == null) {
                               _scaffoldKey.currentState.showSnackBar(SnackBar(
-                                content: Text(AppLocalizations.of(context).translate("loginTxtErrorSignIn")),
+                                content: Text(AppLocalizations.of(context)
+                                    .translate("loginTxtErrorSignIn")),
                               ));
                             }
                           }
@@ -131,7 +138,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         padding: const EdgeInsets.only(top: 48),
                         child: Center(
                             child: Text(
-                              AppLocalizations.of(context).translate("loginTxtHaveAccount"),
+                          AppLocalizations.of(context)
+                              .translate("loginTxtHaveAccount"),
                           style: Theme.of(context).textTheme.button,
                         )),
                       ),
@@ -140,7 +148,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         child: null,
                       )
                     : FlatButton(
-                        child: Text(AppLocalizations.of(context).translate("loginBtnLinkSignIn")),
+                        child: Text(AppLocalizations.of(context)
+                            .translate("loginBtnLinkSignIn")),
                         textColor: Theme.of(context).iconTheme.color,
                         onPressed: () {
                           Navigator.of(context)

@@ -50,8 +50,10 @@ class _CreateEditTodoScreenState extends State<CreateEditTodoScreen> {
           },
         ),
         title: Text(_todo != null
-            ? AppLocalizations.of(context).translate("todosCreateEditAppBarTitleEditTxt")
-            : AppLocalizations.of(context).translate("todosCreateEditAppBarTitleNewTxt")),
+            ? AppLocalizations.of(context)
+                .translate("todosCreateEditAppBarTitleEditTxt")
+            : AppLocalizations.of(context)
+                .translate("todosCreateEditAppBarTitleNewTxt")),
         actions: <Widget>[
           FlatButton(
               onPressed: () {
@@ -104,13 +106,15 @@ class _CreateEditTodoScreenState extends State<CreateEditTodoScreen> {
                 controller: _taskController,
                 style: Theme.of(context).textTheme.body1,
                 validator: (value) => value.isEmpty
-                    ? AppLocalizations.of(context).translate("todosCreateEditTaskNameValidatorMsg")
+                    ? AppLocalizations.of(context)
+                        .translate("todosCreateEditTaskNameValidatorMsg")
                     : null,
                 decoration: InputDecoration(
                   enabledBorder: OutlineInputBorder(
                       borderSide: BorderSide(
                           color: Theme.of(context).iconTheme.color, width: 2)),
-                  labelText: AppLocalizations.of(context).translate("todosCreateEditTaskNameTxt"),
+                  labelText: AppLocalizations.of(context)
+                      .translate("todosCreateEditTaskNameTxt"),
                 ),
               ),
               Padding(
@@ -124,7 +128,8 @@ class _CreateEditTodoScreenState extends State<CreateEditTodoScreen> {
                         borderSide: BorderSide(
                             color: Theme.of(context).iconTheme.color,
                             width: 2)),
-                    labelText: AppLocalizations.of(context).translate("todosCreateEditNotesTxt"),
+                    labelText: AppLocalizations.of(context)
+                        .translate("todosCreateEditNotesTxt"),
                     alignLabelWithHint: true,
                     contentPadding: new EdgeInsets.symmetric(
                         vertical: 10.0, horizontal: 10.0),
@@ -136,7 +141,8 @@ class _CreateEditTodoScreenState extends State<CreateEditTodoScreen> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
-                    Text(AppLocalizations.of(context).translate("todosCreateEditCompletedTxt")),
+                    Text(AppLocalizations.of(context)
+                        .translate("todosCreateEditCompletedTxt")),
                     Checkbox(
                         value: _checkboxCompleted,
                         onChanged: (value) {

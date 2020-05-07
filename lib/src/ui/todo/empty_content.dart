@@ -4,11 +4,7 @@ class EmptyContentWidget extends StatelessWidget {
   final String title;
   final String message;
 
-  EmptyContentWidget(
-      {Key key,
-      this.title,
-      this.message})
-      : super(key: key);
+  EmptyContentWidget({Key key, this.title, this.message}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
