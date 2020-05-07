@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:noteapp/app_localizations.dart';
 import 'package:noteapp/auth_widget_builder.dart';
-import 'package:noteapp/constants/app_themes.dart';
+import 'package:noteapp/src/constants/app_themes.dart';
 import 'package:noteapp/flavor.dart';
-import 'package:noteapp/models/user_model.dart';
-import 'package:noteapp/providers/auth_provider.dart';
-import 'package:noteapp/providers/language_provider.dart';
-import 'package:noteapp/providers/theme_provider.dart';
+import 'package:noteapp/src/models/user_model.dart';
+import 'package:noteapp/src/providers/auth_provider.dart';
+import 'package:noteapp/src/providers/language_provider.dart';
+import 'package:noteapp/src/providers/theme_provider.dart';
 import 'package:noteapp/routes.dart';
-import 'package:noteapp/services/firestore_database.dart';
-import 'package:noteapp/ui/auth/sign_in_screen.dart';
-import 'package:noteapp/ui/home/home.dart';
+import 'package:noteapp/src/services/firestore_database.dart';
+import 'package:noteapp/src/ui/auth/sign_in_screen.dart';
+import 'package:noteapp/src/ui/home/home.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 

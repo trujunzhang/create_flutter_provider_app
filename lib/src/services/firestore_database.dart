@@ -2,9 +2,9 @@ import 'dart:async';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:meta/meta.dart';
-import 'package:noteapp/models/todo_model.dart';
-import 'package:noteapp/services/firestore_path.dart';
-import 'package:noteapp/services/firestore_service.dart';
+import 'package:noteapp/src/models/todo_model.dart';
+import 'package:noteapp/src/services/firestore_path.dart';
+import 'package:noteapp/src/services/firestore_service.dart';
 
 String documentIdFromCurrentDate() => DateTime.now().toIso8601String();
 

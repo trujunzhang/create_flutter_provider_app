@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:noteapp/app_localizations.dart';
 import 'package:noteapp/flavor.dart';
-import 'package:noteapp/providers/auth_provider.dart';
+import 'package:noteapp/src/providers/auth_provider.dart';
 import 'package:noteapp/routes.dart';
 import 'package:provider/provider.dart';
 

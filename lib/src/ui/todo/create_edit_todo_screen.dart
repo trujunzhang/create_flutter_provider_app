@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:noteapp/app_localizations.dart';
-import 'package:noteapp/models/todo_model.dart';
-import 'package:noteapp/services/firestore_database.dart';
+import 'package:noteapp/src/models/todo_model.dart';
+import 'package:noteapp/src/services/firestore_database.dart';
 import 'package:provider/provider.dart';
 
 class CreateEditTodoScreen extends StatefulWidget {

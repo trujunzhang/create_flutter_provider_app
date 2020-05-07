@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:noteapp/app_localizations.dart';
-import 'package:noteapp/providers/language_provider.dart';
+import 'package:noteapp/src/providers/language_provider.dart';
 import 'package:provider/provider.dart';
 
 enum LanguagesActions { english, chinese }
