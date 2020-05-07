@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ieatta/src/constants/app_font_family.dart';
 
 class AppThemes {
   AppThemes._();
@@ -8,7 +9,7 @@ class AppThemes {
   static const Color _lightPrimaryVariantColor = Colors.white;
   static const Color _lightSecondaryColor = Colors.green;
   static const Color _lightOnPrimaryColor = Colors.black;
- static const Color _lightButtonPrimaryColor = Colors.orangeAccent;
+  static const Color _lightButtonPrimaryColor = Colors.orangeAccent;
   static const Color _lightAppBarColor = Colors.orangeAccent;
   static Color _lightIconColor = Colors.orangeAccent;
   static Color _lightSnackBarBackgroundErrorColor = Colors.redAccent;
@@ -69,6 +70,7 @@ class AppThemes {
 
   //the light theme
   static final ThemeData lightTheme = ThemeData(
+    fontFamily: AppFontFamily.productSans,
     scaffoldBackgroundColor: _lightPrimaryVariantColor,
     floatingActionButtonTheme: FloatingActionButtonThemeData(
       backgroundColor: _lightButtonPrimaryColor,
@@ -104,6 +106,7 @@ class AppThemes {
 
   //the dark theme
   static final ThemeData darkTheme = ThemeData(
+    fontFamily: AppFontFamily.productSans,
     scaffoldBackgroundColor: _darkPrimaryVariantColor,
     floatingActionButtonTheme: FloatingActionButtonThemeData(
       backgroundColor: _darkButtonPrimaryColor,
