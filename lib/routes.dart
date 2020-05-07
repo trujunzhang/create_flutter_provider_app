@@ -3,7 +3,7 @@ import 'package:ieatta/src/ui/auth/register_screen.dart';
 import 'package:ieatta/src/ui/auth/sign_in_screen.dart';
 import 'package:ieatta/src/ui/setting/setting_screen.dart';
 import 'package:ieatta/src/ui/splash/splash_screen.dart';
-import 'package:ieatta/src/ui/todo/create_edit_todo_screen.dart';
+import 'package:ieatta/src/ui/todo/edit/create_edit_todo_screen.dart';
 import 'package:ieatta/src/ui/todo/todos_screen.dart';
 
 class Routes {

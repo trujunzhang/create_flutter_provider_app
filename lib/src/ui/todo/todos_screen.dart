@@ -7,6 +7,7 @@ import 'package:ieatta/src/services/firestore_database.dart';
 import 'package:ieatta/src/ui/todo/empty_content.dart';
 import 'package:provider/provider.dart';
 
+import 'list/todos_list.dart';
 import 'todos_app_bar.dart';
 
 class TodosScreen extends StatelessWidget {
@@ -14,10 +15,6 @@ class TodosScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final authProvider = Provider.of<AuthProvider>(context);
-    final firestoreDatabase =
-        Provider.of<FirestoreDatabase>(context, listen: false);
-
     return Scaffold(
       key: _scaffoldKey,
       appBar: TodosAppBar(),
@@ -44,66 +41,7 @@ class TodosScreen extends StatelessWidget {
           if (snapshot.hasData) {
             List<TodoModel> todos = snapshot.data;
             if (todos.isNotEmpty) {
-              return ListView.separated(
-                itemCount: todos.length,
-                itemBuilder: (context, index) {
-                  return Dismissible(
-                    background: Container(
-                      color: Colors.red,
-                      child: Center(
-                          child: Text(
-                        AppLocalizations.of(context)
-                            .translate("todosDismissibleMsgTxt"),
-                        style: TextStyle(color: Theme.of(context).canvasColor),
-                      )),
-                    ),
-                    key: Key(todos[index].id),
-                    onDismissed: (direction) {
-                      firestoreDatabase.deleteTodo(todos[index]);
-
-                      _scaffoldKey.currentState.showSnackBar(SnackBar(
-                        backgroundColor: Theme.of(context).appBarTheme.color,
-                        content: Text(
-                          AppLocalizations.of(context)
-                                  .translate("todosSnackBarContent") +
-                              todos[index].task,
-                          style:
-                              TextStyle(color: Theme.of(context).canvasColor),
-                        ),
-                        duration: Duration(seconds: 3),
-                        action: SnackBarAction(
-                          label: AppLocalizations.of(context)
-                              .translate("todosSnackBarActionLbl"),
-                          textColor: Theme.of(context).canvasColor,
-                          onPressed: () {
-                            firestoreDatabase.setTodo(todos[index]);
-                          },
-                        ),
-                      ));
-                    },
-                    child: ListTile(
-                      leading: Checkbox(
-                          value: todos[index].complete,
-                          onChanged: (value) {
-                            TodoModel todo = TodoModel(
-                                id: todos[index].id,
-                                task: todos[index].task,
-                                extraNote: todos[index].extraNote,
-                                complete: value);
-                            firestoreDatabase.setTodo(todo);
-                          }),
-                      title: Text(todos[index].task),
-                      onTap: () {
-                        Navigator.of(context).pushNamed(Routes.create_edit_todo,
-                            arguments: todos[index]);
-                      },
-                    ),
-                  );
-                },
-                separatorBuilder: (context, index) {
-                  return Divider(height: 0.5);
-                },
-              );
+              return TodosList(todos: todos, scaffoldKey: _scaffoldKey);
             } else {
               return EmptyContentWidget(
                 title: AppLocalizations.of(context)
