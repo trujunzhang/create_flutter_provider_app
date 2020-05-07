@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:ieatta/app_localizations.dart';
 import 'package:ieatta/routes.dart';
 import 'package:ieatta/src/models/todo_model.dart';
-import 'package:ieatta/src/models/user_model.dart';
 import 'package:ieatta/src/providers/auth_provider.dart';
 import 'package:ieatta/src/services/firestore_database.dart';
 import 'package:ieatta/src/ui/todo/empty_content.dart';
-import 'package:ieatta/src/ui/todo/todos_extra_actions.dart';
 import 'package:provider/provider.dart';
+
+import 'todos_app_bar.dart';
 
 class TodosScreen extends StatelessWidget {
   final _scaffoldKey = GlobalKey<ScaffoldState>();
@@ -20,40 +20,7 @@ class TodosScreen extends StatelessWidget {
 
     return Scaffold(
       key: _scaffoldKey,
-      appBar: AppBar(
-        title: StreamBuilder(
-            stream: authProvider.user,
-            builder: (context, snapshot) {
-              final UserModel user = snapshot.data;
-              return Text(user != null
-                  ? user.email +
-                      " - " +
-                      AppLocalizations.of(context).translate("homeAppBarTitle")
-                  : AppLocalizations.of(context).translate("homeAppBarTitle"));
-            }),
-        actions: <Widget>[
-          StreamBuilder(
-              stream: firestoreDatabase.todosStream(),
-              builder: (context, snapshot) {
-                if (snapshot.hasData) {
-                  List<TodoModel> todos = snapshot.data;
-                  return Visibility(
-                      visible: todos.isNotEmpty ? true : false,
-                      child: TodosExtraActions());
-                } else {
-                  return Container(
-                    width: 0,
-                    height: 0,
-                  );
-                }
-              }),
-          IconButton(
-              icon: Icon(Icons.settings),
-              onPressed: () {
-                Navigator.of(context).pushNamed(Routes.setting);
-              }),
-        ],
-      ),
+      appBar: TodosAppBar(),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add),
         onPressed: () {
