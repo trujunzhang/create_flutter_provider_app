@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:noteapp/src/models/user_model.dart';
-import 'package:noteapp/src/providers/auth_provider.dart';
-import 'package:noteapp/routes.dart';
-import 'package:noteapp/app_localizations.dart';
+import 'package:ieatta/src/models/user_model.dart';
+import 'package:ieatta/src/providers/auth_provider.dart';
+import 'package:ieatta/routes.dart';
+import 'package:ieatta/app_localizations.dart';
 
 class RegisterScreen extends StatefulWidget {
   @override

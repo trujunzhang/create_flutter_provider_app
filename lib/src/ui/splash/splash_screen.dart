@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:noteapp/app_localizations.dart';
-import 'package:noteapp/routes.dart';
+import 'package:ieatta/app_localizations.dart';
+import 'package:ieatta/routes.dart';
 
 class SplashScreen extends StatefulWidget {
   @override

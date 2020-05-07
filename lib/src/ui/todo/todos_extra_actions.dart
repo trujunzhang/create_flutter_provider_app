@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:noteapp/app_localizations.dart';
-import 'package:noteapp/src/services/firestore_database.dart';
+import 'package:ieatta/app_localizations.dart';
+import 'package:ieatta/src/services/firestore_database.dart';
 import 'package:provider/provider.dart';
 
 enum TodosActions { toggleAllComplete, clearCompleted }

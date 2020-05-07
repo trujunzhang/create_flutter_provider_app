@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:noteapp/flavor.dart';
-import 'package:noteapp/my_app.dart';
-import 'package:noteapp/src/providers/auth_provider.dart';
-import 'package:noteapp/src/providers/language_provider.dart';
-import 'package:noteapp/src/providers/theme_provider.dart';
-import 'package:noteapp/src/services/firestore_database.dart';
 import 'package:provider/provider.dart';
+import 'package:ieatta/flavor.dart';
+import 'package:ieatta/my_app.dart';
+import 'package:ieatta/src/providers/auth_provider.dart';
+import 'package:ieatta/src/providers/language_provider.dart';
+import 'package:ieatta/src/providers/theme_provider.dart';
+import 'package:ieatta/src/services/firestore_database.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();

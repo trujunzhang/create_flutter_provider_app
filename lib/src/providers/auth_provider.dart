@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:noteapp/src/models/user_model.dart';
+import 'package:ieatta/src/models/user_model.dart';
 
 enum Status {
   Uninitialized,
