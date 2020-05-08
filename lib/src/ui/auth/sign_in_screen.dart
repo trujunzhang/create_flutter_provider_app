@@ -5,6 +5,9 @@ import 'package:ieatta/flavor.dart';
 import 'package:ieatta/src/providers/auth_provider.dart';
 import 'package:provider/provider.dart';
 
+import 'widgets/auth_logo.dart';
+import 'widgets/auth_custom_clipper.dart';
+
 class SignInScreen extends StatefulWidget {
   @override
   _SignInScreenState createState() => _SignInScreenState();
@@ -59,12 +62,7 @@ class _SignInScreenState extends State<SignInScreen> {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: FlutterLogo(
-                    size: 128,
-                  ),
-                ),
+                AuthLogo(),
                 TextFormField(
                   controller: _emailController,
                   style: Theme.of(context).textTheme.body1,
@@ -177,7 +175,7 @@ class _SignInScreenState extends State<SignInScreen> {
 
   Widget _buildBackground() {
     return ClipPath(
-      clipper: SignInCustomClipper(),
+      clipper: AuthCustomClipper(),
       child: Container(
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height * 0.5,
@@ -187,32 +185,3 @@ class _SignInScreenState extends State<SignInScreen> {
   }
 }
 
-class SignInCustomClipper extends CustomClipper<Path> {
-  @override
-  Path getClip(Size size) {
-    Path path = Path();
-    path.lineTo(0, size.height);
-
-    var firstEndPoint = Offset(size.width / 2, size.height - 95);
-    var firstControlPoint = Offset(size.width / 6, size.height * 0.45);
-
-    path.quadraticBezierTo(firstControlPoint.dx, firstControlPoint.dy,
-        firstEndPoint.dx, firstEndPoint.dy);
-
-    var secondEndPoint = Offset(size.width, size.height / 2 - 50);
-    var secondControlPoint = Offset(size.width, size.height + 15);
-
-    path.quadraticBezierTo(secondControlPoint.dx, secondControlPoint.dy,
-        secondEndPoint.dx, secondEndPoint.dy);
-
-    path.lineTo(size.width, size.height / 2);
-    path.lineTo(size.width, 0);
-    path.close();
-    return path;
-  }
-
-  @override
-  bool shouldReclip(CustomClipper<Path> oldClipper) {
-    return true;
-  }
-}
