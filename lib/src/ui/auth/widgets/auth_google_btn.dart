@@ -19,7 +19,8 @@ class _AuthGoogleBtnState extends State<AuthGoogleBtn> {
   Widget build(BuildContext context) {
     final authProvider = Provider.of<AuthProvider>(context);
     if (authProvider.status == Status.Authenticating ||
-        authProvider.status == Status.Registering) {
+        authProvider.status == Status.Registering ||
+        authProvider.status == Status.GoogleAuthenticating) {
       return Center(
         child: null,
       );
