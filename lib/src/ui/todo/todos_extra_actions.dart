@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ieatta/app_localizations.dart';
+import 'package:ieatta/app/app_localizations.dart';
 import 'package:ieatta/src/services/firestore_database.dart';
 import 'package:provider/provider.dart';
 

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ieatta/app_localizations.dart';
+import 'package:ieatta/app/app_localizations.dart';
 import 'package:ieatta/routes.dart';
 import 'package:ieatta/src/models/todo_model.dart';
 import 'package:ieatta/src/providers/auth_provider.dart';

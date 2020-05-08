@@ -5,7 +5,7 @@ import 'package:ieatta/src/providers/auth_provider.dart';
 import 'package:ieatta/src/services/firestore_database.dart';
 import 'package:provider/provider.dart';
 
-import '../../../app_localizations.dart';
+import '../../../app/app_localizations.dart';
 import '../../../routes.dart';
 import 'todos_extra_actions.dart';
 

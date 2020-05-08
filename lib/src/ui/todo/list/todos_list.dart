@@ -3,7 +3,7 @@ import 'package:ieatta/src/models/todo_model.dart';
 import 'package:ieatta/src/services/firestore_database.dart';
 import 'package:provider/provider.dart';
 
-import '../../../../app_localizations.dart';
+import '../../../../app/app_localizations.dart';
 import '../../../../routes.dart';
 import 'todo_view.dart';
 

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
-import 'package:ieatta/app_localizations.dart';
+import 'package:ieatta/app/app_localizations.dart';
 import 'package:ieatta/routes.dart';
 import 'package:ieatta/src/providers/auth_provider.dart';
 import 'package:ieatta/src/providers/theme_provider.dart';

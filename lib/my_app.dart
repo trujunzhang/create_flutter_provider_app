@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:ieatta/app_localizations.dart';
-import 'package:ieatta/auth_widget_builder.dart';
+import 'package:ieatta/app/app_localizations.dart';
+import 'package:ieatta/app/auth_widget_builder.dart';
 import 'package:ieatta/flavor.dart';
 import 'package:ieatta/routes.dart';
 import 'package:ieatta/src/constants/app_themes.dart';
