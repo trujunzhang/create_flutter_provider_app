@@ -101,7 +101,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         border: OutlineInputBorder()),
                   ),
                 ),
-                authProvider.status == Status.Registering
+                (authProvider.status == Status.Registering ||
+                        authProvider.status == Status.GoogleAuthenticating)
                     ? Center(
                         child: CircularProgressIndicator(),
                       )
@@ -133,7 +134,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   isSignIn: false,
                   scaffoldKey: _scaffoldKey,
                 ),
-                authProvider.status == Status.Registering
+                (authProvider.status == Status.Registering ||
+                        authProvider.status == Status.GoogleAuthenticating)
                     ? Center(
                         child: null,
                       )
@@ -146,7 +148,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
                           style: Theme.of(context).textTheme.button,
                         )),
                       ),
-                authProvider.status == Status.Registering
+                (authProvider.status == Status.Registering ||
+                        authProvider.status == Status.GoogleAuthenticating)
                     ? Center(
                         child: null,
                       )

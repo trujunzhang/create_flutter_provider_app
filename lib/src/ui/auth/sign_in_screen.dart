@@ -100,7 +100,8 @@ class _SignInScreenState extends State<SignInScreen> {
                         border: OutlineInputBorder()),
                   ),
                 ),
-                authProvider.status == Status.Authenticating
+                (authProvider.status == Status.Authenticating ||
+                        authProvider.status == Status.GoogleAuthenticating)
                     ? Center(
                         child: CircularProgressIndicator(),
                       )
@@ -132,7 +133,8 @@ class _SignInScreenState extends State<SignInScreen> {
                   isSignIn: true,
                   scaffoldKey: _scaffoldKey,
                 ),
-                authProvider.status == Status.Authenticating
+                (authProvider.status == Status.Authenticating ||
+                        authProvider.status == Status.GoogleAuthenticating)
                     ? Center(
                         child: null,
                       )
@@ -145,7 +147,8 @@ class _SignInScreenState extends State<SignInScreen> {
                           style: Theme.of(context).textTheme.button,
                         )),
                       ),
-                authProvider.status == Status.Authenticating
+                (authProvider.status == Status.Authenticating ||
+                        authProvider.status == Status.GoogleAuthenticating)
                     ? Center(
                         child: null,
                       )

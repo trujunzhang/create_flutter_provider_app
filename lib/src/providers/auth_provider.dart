@@ -7,6 +7,7 @@ enum Status {
   Uninitialized,
   Authenticated,
   Authenticating,
+  GoogleAuthenticating,
   Unauthenticated,
   Registering
 }
@@ -25,10 +26,9 @@ status for your UI or widgets to listen.
 
 class AuthProvider extends ChangeNotifier {
   GoogleSignIn _googleSignIn = GoogleSignIn(
-    scopes: [
-      'email'
-    ],
+    scopes: ['email'],
   );
+
   //Firebase Auth object
   FirebaseAuth _auth;
 
@@ -56,7 +56,7 @@ class AuthProvider extends ChangeNotifier {
 
     return AuthUserModel(
         uid: user.uid,
-        email: user.email??"",
+        email: user.email ?? "",
         displayName: user.displayName,
         phoneNumber: user.phoneNumber,
         photoUrl: user.photoUrl);
@@ -109,7 +109,7 @@ class AuthProvider extends ChangeNotifier {
   //Method to handle user sign in using google
   Future<bool> signInWithGoogle() async {
     try {
-      _status = Status.Authenticating;
+      _status = Status.GoogleAuthenticating;
       notifyListeners();
       GoogleSignInAccount googleUser = await _googleSignIn.signIn();
       GoogleSignInAuthentication googleAuth = await googleUser.authentication;
