@@ -56,7 +56,7 @@ class AuthProvider extends ChangeNotifier {
 
     return AuthUserModel(
         uid: user.uid,
-        email: user.email,
+        email: user.email??"",
         displayName: user.displayName,
         phoneNumber: user.phoneNumber,
         photoUrl: user.photoUrl);
@@ -127,7 +127,6 @@ class AuthProvider extends ChangeNotifier {
     }
   }
 
-
   //Method to handle password reset email
   Future<void> sendPasswordResetEmail(String email) async {
     await _auth.sendPasswordResetEmail(email: email);
@@ -136,7 +135,7 @@ class AuthProvider extends ChangeNotifier {
   //Method to handle user signing out
   Future signOut() async {
     _auth.signOut();
-    _googleSignIn.signOut();
+    _googleSignIn.disconnect();
     _status = Status.Unauthenticated;
     notifyListeners();
     return Future.delayed(Duration.zero);
