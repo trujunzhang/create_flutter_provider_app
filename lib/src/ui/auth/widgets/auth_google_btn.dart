@@ -7,10 +7,9 @@ class AuthGoogleBtn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: GoogleSignInButton(
-        onPressed: () {},
-        darkMode: true, // default: false
-      )
-    );
+        child: GoogleSignInButton(
+      onPressed: () {},
+      darkMode: true, // default: false
+    ));
   }
 }

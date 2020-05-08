@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class AuthCustomClipper extends CustomClipper<Path> {
@@ -30,4 +29,3 @@ class AuthCustomClipper extends CustomClipper<Path> {
     return true;
   }
 }
-

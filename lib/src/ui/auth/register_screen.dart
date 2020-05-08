@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ieatta/app/app_localizations.dart';
 import 'package:ieatta/app/routes.dart';
-import 'package:ieatta/src/models/user_model.dart';
+import 'package:ieatta/src/models/auth_user_model.dart';
 import 'package:ieatta/src/providers/auth_provider.dart';
 import 'package:provider/provider.dart';
 
@@ -115,7 +115,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                             FocusScope.of(context)
                                 .unfocus(); //to hide the keyboard - if any
 
-                            UserModel userModel =
+                            AuthUserModel userModel =
                                 await authProvider.registerWithEmailAndPassword(
                                     _emailController.text,
                                     _passwordController.text);

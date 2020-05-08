@@ -5,7 +5,7 @@ import 'package:ieatta/app/auth_widget_builder.dart';
 import 'package:ieatta/app/routes.dart';
 import 'package:ieatta/flavor.dart';
 import 'package:ieatta/src/constants/app_themes.dart';
-import 'package:ieatta/src/models/user_model.dart';
+import 'package:ieatta/src/models/auth_user_model.dart';
 import 'package:ieatta/src/providers/auth_provider.dart';
 import 'package:ieatta/src/providers/language_provider.dart';
 import 'package:ieatta/src/providers/theme_provider.dart';
@@ -33,7 +33,7 @@ class MyApp extends StatelessWidget {
             return AuthWidgetBuilder(
               databaseBuilder: databaseBuilder,
               builder: (BuildContext context,
-                  AsyncSnapshot<UserModel> userSnapshot) {
+                  AsyncSnapshot<AuthUserModel> userSnapshot) {
                 return MaterialApp(
                   debugShowCheckedModeBanner: false,
                   locale: languageProviderRef.appLocale,
