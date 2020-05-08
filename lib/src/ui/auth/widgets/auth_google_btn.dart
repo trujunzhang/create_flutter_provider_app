@@ -11,7 +11,8 @@ class AuthGoogleBtn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final authProvider = Provider.of<AuthProvider>(context);
-    if(authProvider.status == Status.Registering){
+    if (authProvider.status == Status.Authenticating ||
+        authProvider.status == Status.Registering) {
       return Center(
         child: null,
       );
@@ -21,17 +22,13 @@ class AuthGoogleBtn extends StatelessWidget {
         height: 48,
         padding: const EdgeInsets.only(top: 8),
         child: GoogleSignInButton(
-          text:
-         isSignIn?
-          'Sign in with Google':
-          'Sign up with Google',
+          text: isSignIn ? 'Sign in with Google' : 'Sign up with Google',
           onPressed: onClick,
           darkMode: true, // default: false
         ));
   }
 
-
-  onClick(){
-
+  onClick() {
+    var x = 0;
   }
 }
