@@ -128,13 +128,8 @@ class _SignInScreenState extends State<SignInScreen> {
                             }
                           }
                         }),
-                Container(
-                  color: Colors.transparent,
-                  height: 50,
-                  padding: const EdgeInsets.only(top: 12),
-                  child: AuthGoogleBtn(
-                    isSignIn: true,
-                  ),
+                AuthGoogleBtn(
+                  isSignIn: true,
                 ),
                 authProvider.status == Status.Authenticating
                     ? Center(

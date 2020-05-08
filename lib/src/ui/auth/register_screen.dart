@@ -6,6 +6,7 @@ import 'package:ieatta/src/providers/auth_provider.dart';
 import 'package:provider/provider.dart';
 
 import 'widgets/auth_custom_clipper.dart';
+import 'widgets/auth_google_btn.dart';
 import 'widgets/auth_logo.dart';
 
 class RegisterScreen extends StatefulWidget {
@@ -128,6 +129,9 @@ class _RegisterScreenState extends State<RegisterScreen> {
                             }
                           }
                         }),
+                AuthGoogleBtn(
+                  isSignIn: false,
+                ),
                 authProvider.status == Status.Registering
                     ? Center(
                         child: null,
