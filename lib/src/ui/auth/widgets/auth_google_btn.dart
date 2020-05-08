@@ -1,26 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_auth_buttons/flutter_auth_buttons.dart';
+import 'package:ieatta/app/app_localizations.dart';
 import 'package:ieatta/src/providers/auth_provider.dart';
 import 'package:provider/provider.dart';
-import 'package:google_sign_in/google_sign_in.dart';
 
 class AuthGoogleBtn extends StatefulWidget {
-  AuthGoogleBtn({Key key, this.isSignIn}) : super(key: key);
+  AuthGoogleBtn({Key key, this.isSignIn, this.scaffoldKey}) : super(key: key);
 
   final bool isSignIn;
+  final scaffoldKey;
 
   @override
   _AuthGoogleBtnState createState() => _AuthGoogleBtnState();
 }
 
 class _AuthGoogleBtnState extends State<AuthGoogleBtn> {
-  GoogleSignIn _googleSignIn = GoogleSignIn(
-    scopes: [
-      'email',
-      'https://www.googleapis.com/auth/contacts.readonly',
-    ],
-  );
-
   @override
   Widget build(BuildContext context) {
     final authProvider = Provider.of<AuthProvider>(context);
@@ -36,13 +30,17 @@ class _AuthGoogleBtnState extends State<AuthGoogleBtn> {
         padding: const EdgeInsets.only(top: 8),
         child: GoogleSignInButton(
           text: widget.isSignIn ? 'Sign in with Google' : 'Sign up with Google',
-          onPressed: onClick,
+          onPressed: () async {
+            bool status = await authProvider.signInWithGoogle();
+
+            if (!status) {
+              widget.scaffoldKey.currentState.showSnackBar(SnackBar(
+                content: Text(AppLocalizations.of(context)
+                    .translate("loginTxtErrorSignIn")),
+              ));
+            }
+          },
           darkMode: true, // default: false
         ));
-  }
-
-  onClick() {
-
-
   }
 }

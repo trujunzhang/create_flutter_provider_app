@@ -131,6 +131,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         }),
                 AuthGoogleBtn(
                   isSignIn: false,
+                  scaffoldKey: _scaffoldKey,
                 ),
                 authProvider.status == Status.Registering
                     ? Center(

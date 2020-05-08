@@ -130,6 +130,7 @@ class _SignInScreenState extends State<SignInScreen> {
                         }),
                 AuthGoogleBtn(
                   isSignIn: true,
+                  scaffoldKey: _scaffoldKey,
                 ),
                 authProvider.status == Status.Authenticating
                     ? Center(
