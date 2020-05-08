@@ -5,8 +5,8 @@ import 'package:ieatta/src/models/auth_user_model.dart';
 import 'package:ieatta/src/providers/auth_provider.dart';
 import 'package:provider/provider.dart';
 
-import 'widgets/auth_logo.dart';
 import 'widgets/auth_custom_clipper.dart';
+import 'widgets/auth_logo.dart';
 
 class RegisterScreen extends StatefulWidget {
   @override

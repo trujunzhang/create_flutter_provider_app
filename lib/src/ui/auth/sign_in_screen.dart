@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:ieatta/app/app_localizations.dart';
 import 'package:ieatta/app/routes.dart';
-import 'package:ieatta/flavor.dart';
 import 'package:ieatta/src/providers/auth_provider.dart';
 import 'package:provider/provider.dart';
 
-import 'widgets/auth_logo.dart';
 import 'widgets/auth_custom_clipper.dart';
+import 'widgets/auth_google_btn.dart';
+import 'widgets/auth_logo.dart';
 
 class SignInScreen extends StatefulWidget {
   @override
@@ -128,6 +128,14 @@ class _SignInScreenState extends State<SignInScreen> {
                             }
                           }
                         }),
+                Container(
+                  color: Colors.transparent,
+                  height: 50,
+                  padding: const EdgeInsets.only(top: 12),
+                  child: AuthGoogleBtn(
+                    isSignIn: true,
+                  ),
+                ),
                 authProvider.status == Status.Authenticating
                     ? Center(
                         child: null,
@@ -154,19 +162,6 @@ class _SignInScreenState extends State<SignInScreen> {
                               .pushReplacementNamed(Routes.register);
                         },
                       ),
-                Center(
-                    child: Column(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: <Widget>[
-                    SizedBox(
-                      height: 70,
-                    ),
-                    Text(
-                      Provider.of<Flavor>(context).toString(),
-                      style: Theme.of(context).textTheme.body2,
-                    ),
-                  ],
-                )),
               ],
             ),
           ),

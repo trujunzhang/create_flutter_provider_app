@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:ieatta/src/models/todo_model.dart';
 import 'package:ieatta/src/models/auth_user_model.dart';
+import 'package:ieatta/src/models/todo_model.dart';
 import 'package:ieatta/src/providers/auth_provider.dart';
 import 'package:ieatta/src/services/firestore_database.dart';
 import 'package:provider/provider.dart';
