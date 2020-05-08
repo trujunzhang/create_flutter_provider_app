@@ -3,7 +3,7 @@ import 'package:ieatta/src/models/todo_model.dart';
 import 'package:ieatta/src/services/firestore_database.dart';
 import 'package:provider/provider.dart';
 
-import '../../../../routes.dart';
+import '../../../../app/routes.dart';
 
 class TodoView extends StatelessWidget {
   const TodoView({Key key, this.todo}) : super(key: key);

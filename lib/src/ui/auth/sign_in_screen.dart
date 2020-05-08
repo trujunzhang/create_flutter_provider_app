@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ieatta/app/app_localizations.dart';
+import 'package:ieatta/app/routes.dart';
 import 'package:ieatta/flavor.dart';
-import 'package:ieatta/routes.dart';
 import 'package:ieatta/src/providers/auth_provider.dart';
 import 'package:provider/provider.dart';
 

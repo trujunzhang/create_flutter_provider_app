@@ -4,7 +4,6 @@ import 'package:ieatta/src/services/firestore_database.dart';
 import 'package:provider/provider.dart';
 
 import '../../../../app/app_localizations.dart';
-import '../../../../routes.dart';
 import 'todo_view.dart';
 
 class TodosList extends StatelessWidget {

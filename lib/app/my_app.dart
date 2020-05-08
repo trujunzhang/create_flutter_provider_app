@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:ieatta/app/app_localizations.dart';
 import 'package:ieatta/app/auth_widget_builder.dart';
+import 'package:ieatta/app/routes.dart';
 import 'package:ieatta/flavor.dart';
-import 'package:ieatta/routes.dart';
 import 'package:ieatta/src/constants/app_themes.dart';
 import 'package:ieatta/src/models/user_model.dart';
 import 'package:ieatta/src/providers/auth_provider.dart';
@@ -38,9 +38,7 @@ class MyApp extends StatelessWidget {
                   debugShowCheckedModeBanner: false,
                   locale: languageProviderRef.appLocale,
                   //List of all supported locales
-                  supportedLocales: [
-                    Locale('en', 'US')
-                  ],
+                  supportedLocales: [Locale('en', 'US')],
                   //These delegates make sure that the localization data for the proper language is loaded
                   localizationsDelegates: [
                     //A class which loads the translations from JSON files
@@ -80,9 +78,6 @@ class MyApp extends StatelessWidget {
                             : SignInScreen();
                       }
 
-//                      return Material(
-//                        child: CircularProgressIndicator(),
-//                      );
                       return Material(
                         child: Container(
                           color: Colors.red,
