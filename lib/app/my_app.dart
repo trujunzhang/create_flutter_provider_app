@@ -10,8 +10,8 @@ import 'package:ieatta/core/providers/language_provider.dart';
 import 'package:ieatta/core/providers/theme_provider.dart';
 import 'package:ieatta/core/services/firestore_database.dart';
 import 'package:ieatta/flavor.dart';
-import 'package:ieatta/src/ui/auth/sign_in_screen.dart';
-import 'package:ieatta/src/ui/home/home.dart';
+import 'package:ieatta/core/ui/auth/sign_in_screen.dart';
+import 'package:ieatta/core/ui/home/home.dart';
 import 'package:provider/provider.dart';
 
 class MyApp extends StatelessWidget {

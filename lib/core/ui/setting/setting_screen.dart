@@ -4,8 +4,9 @@ import 'package:ieatta/app/app_localizations.dart';
 import 'package:ieatta/app/routes.dart';
 import 'package:ieatta/core/providers/auth_provider.dart';
 import 'package:ieatta/core/providers/theme_provider.dart';
-import 'package:ieatta/src/ui/setting/setting_language_actions.dart';
 import 'package:provider/provider.dart';
+
+import 'setting_language_actions.dart';
 
 class SettingScreen extends StatelessWidget {
   @override
