@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ieatta/app/app_localizations.dart';
-import 'package:ieatta/src/providers/language_provider.dart';
+import 'package:ieatta/core/providers/language_provider.dart';
 import 'package:provider/provider.dart';
 
 enum LanguagesActions { english, chinese }

@@ -1,7 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
-import 'package:ieatta/src/models/auth_user_model.dart';
+import 'package:ieatta/core/models/auth_user_model.dart';
 
 enum Status {
   Uninitialized,

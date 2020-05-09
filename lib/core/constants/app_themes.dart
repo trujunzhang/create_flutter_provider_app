@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:ieatta/src/constants/app_font_family.dart';
+
+import 'app_font_family.dart';
 
 class AppThemes {
   AppThemes._();

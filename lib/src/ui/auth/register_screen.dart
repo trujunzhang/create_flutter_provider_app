@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:ieatta/app/app_localizations.dart';
 import 'package:ieatta/app/routes.dart';
-import 'package:ieatta/src/models/auth_user_model.dart';
-import 'package:ieatta/src/providers/auth_provider.dart';
+import 'package:ieatta/core/models/auth_user_model.dart';
+import 'package:ieatta/core/providers/auth_provider.dart';
 import 'package:provider/provider.dart';
 
 import 'widgets/auth_custom_clipper.dart';

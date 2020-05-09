@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:ieatta/src/models/todo_model.dart';
-import 'package:ieatta/src/services/firestore_database.dart';
+import 'package:ieatta/core/models/todo_model.dart';
+import 'package:ieatta/core/services/firestore_database.dart';
 import 'package:provider/provider.dart';
 
 import '../../../../app/app_localizations.dart';
