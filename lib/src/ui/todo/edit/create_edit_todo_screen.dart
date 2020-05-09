@@ -104,7 +104,7 @@ class _CreateEditTodoScreenState extends State<CreateEditTodoScreen> {
             children: <Widget>[
               TextFormField(
                 controller: _taskController,
-                style: Theme.of(context).textTheme.body1,
+                style: Theme.of(context).textTheme.bodyText2,
                 validator: (value) => value.isEmpty
                     ? AppLocalizations.of(context)
                         .translate("todosCreateEditTaskNameValidatorMsg")
@@ -121,7 +121,7 @@ class _CreateEditTodoScreenState extends State<CreateEditTodoScreen> {
                 padding: const EdgeInsets.symmetric(vertical: 16),
                 child: TextFormField(
                   controller: _extraNoteController,
-                  style: Theme.of(context).textTheme.body1,
+                  style: Theme.of(context).textTheme.bodyText2,
                   maxLines: 15,
                   decoration: InputDecoration(
                     enabledBorder: OutlineInputBorder(

@@ -66,7 +66,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 AuthLogo(),
                 TextFormField(
                   controller: _emailController,
-                  style: Theme.of(context).textTheme.body1,
+                  style: Theme.of(context).textTheme.bodyText2,
                   validator: (value) => value.isEmpty
                       ? AppLocalizations.of(context)
                           .translate("loginTxtErrorEmail")
@@ -86,7 +86,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     obscureText: true,
                     maxLength: 12,
                     controller: _passwordController,
-                    style: Theme.of(context).textTheme.body1,
+                    style: Theme.of(context).textTheme.bodyText2,
                     validator: (value) => value.length < 6
                         ? AppLocalizations.of(context)
                             .translate("loginTxtErrorPassword")

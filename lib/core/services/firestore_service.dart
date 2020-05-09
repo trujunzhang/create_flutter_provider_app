@@ -27,11 +27,8 @@ class FirestoreService {
     @required List<Map<String, dynamic>> datas,
     bool merge = false,
   }) async {
-    final reference = Firestore.instance.document(path);
-    final batchSet = Firestore.instance.batch();
-
-//    for()
-//    batchSet.
+//    final reference = Firestore.instance.document(path);
+//    final batchSet = Firestore.instance.batch();
 
     print('$path: $datas');
   }

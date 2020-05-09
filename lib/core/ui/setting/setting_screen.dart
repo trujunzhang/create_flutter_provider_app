@@ -29,7 +29,7 @@ class SettingScreen extends StatelessWidget {
               .translate("settingThemeListSubTitle")),
           trailing: Switch(
             activeColor: Theme.of(context).appBarTheme.color,
-            activeTrackColor: Theme.of(context).textTheme.title.color,
+            activeTrackColor: Theme.of(context).textTheme.headline6.color,
             value: Provider.of<ThemeProvider>(context).isDarkModeOn,
             onChanged: (booleanValue) {
               Provider.of<ThemeProvider>(context, listen: false)
