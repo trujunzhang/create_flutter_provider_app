@@ -4,12 +4,12 @@ import 'package:ieatta/core/models/todo_model.dart';
 import 'package:ieatta/core/services/firestore_database.dart';
 import 'package:provider/provider.dart';
 
-class CreateEditTodoScreen extends StatefulWidget {
+class CreateEditRestaurantScreen extends StatefulWidget {
   @override
-  _CreateEditTodoScreenState createState() => _CreateEditTodoScreenState();
+  _CreateEditRestaurantScreenState createState() => _CreateEditRestaurantScreenState();
 }
 
-class _CreateEditTodoScreenState extends State<CreateEditTodoScreen> {
+class _CreateEditRestaurantScreenState extends State<CreateEditRestaurantScreen> {
   TextEditingController _taskController;
   TextEditingController _extraNoteController;
   final _formKey = GlobalKey<FormState>();

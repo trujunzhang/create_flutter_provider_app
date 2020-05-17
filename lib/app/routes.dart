@@ -3,7 +3,7 @@ import 'package:ieatta/core/ui/auth/register_screen.dart';
 import 'package:ieatta/core/ui/auth/sign_in_screen.dart';
 import 'package:ieatta/core/ui/setting/setting_screen.dart';
 import 'package:ieatta/core/ui/splash/splash_screen.dart';
-import 'package:ieatta/src/ui/todo/edit/create_edit_todo_screen.dart';
+import 'package:ieatta/src/ui/todo/edit/create_edit_restaurant_screen.dart';
 import 'package:ieatta/src/ui/todo/todos_screen.dart';
 
 class Routes {
@@ -22,6 +22,6 @@ class Routes {
     register: (BuildContext context) => RegisterScreen(),
     home: (BuildContext context) => TodosScreen(),
     setting: (BuildContext context) => SettingScreen(),
-    create_edit_todo: (BuildContext context) => CreateEditTodoScreen(),
+    create_edit_todo: (BuildContext context) => CreateEditRestaurantScreen(),
   };
 }
