@@ -14,7 +14,7 @@ class Routes {
   static const String register = '/register';
   static const String home = '/home';
   static const String setting = '/setting';
-  static const String create_edit_todo = '/create_edit_todo';
+  static const String create_edit_restaurant = '/create_edit_restaurant';
 
   static final routes = <String, WidgetBuilder>{
     splash: (BuildContext context) => SplashScreen(),
@@ -22,6 +22,6 @@ class Routes {
     register: (BuildContext context) => RegisterScreen(),
     home: (BuildContext context) => TodosScreen(),
     setting: (BuildContext context) => SettingScreen(),
-    create_edit_todo: (BuildContext context) => CreateEditRestaurantScreen(),
+    create_edit_restaurant: (BuildContext context) => CreateEditRestaurantScreen(),
   };
 }

@@ -21,7 +21,7 @@ class TodosScreen extends StatelessWidget {
         child: Icon(Icons.add),
         onPressed: () {
           Navigator.of(context).pushNamed(
-            Routes.create_edit_todo,
+            Routes.create_edit_restaurant,
           );
         },
       ),

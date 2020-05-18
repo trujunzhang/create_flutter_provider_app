@@ -28,7 +28,7 @@ class TodoView extends StatelessWidget {
       title: Text(todo.task),
       onTap: () {
         Navigator.of(context)
-            .pushNamed(Routes.create_edit_todo, arguments: todo);
+            .pushNamed(Routes.create_edit_restaurant, arguments: todo);
       },
     );
   }
