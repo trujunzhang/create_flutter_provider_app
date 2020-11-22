@@ -1,35 +1,50 @@
 {
   "project_info": {
-    "project_number": "1001788466696",
-    "firebase_url": "https://solid-scope-111511.firebaseio.com",
-    "project_id": "solid-scope-111511",
-    "storage_bucket": "solid-scope-111511.appspot.com"
+    "project_number": "252900163423",
+    "firebase_url": "https://ieatta-sec.firebaseio.com",
+    "project_id": "ieatta-sec",
+    "storage_bucket": "ieatta-sec.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1001788466696:android:cc0209b455ddff79",
+        "mobilesdk_app_id": "1:252900163423:android:92467664eb4011cbc700ea",
         "android_client_info": {
           "package_name": "com.example.ieatta"
         }
       },
       "oauth_client": [
         {
-          "client_id": "1001788466696-orevna12vs6p0f8i5krjkt1sksec1uei.apps.googleusercontent.com",
+          "client_id": "252900163423-0kn8q1l1t5v2jcaaptmf6i13fmda2mda.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ieatta",
+            "certificate_hash": "4c71cff12dd23b4c2a3f995c040a3e243afe5ba4"
+          }
+        },
+        {
+          "client_id": "252900163423-0nrutl0r470annpvd70ct1v50n62vgt9.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBvZhYwgB96moOy2eP8KXAmwwq9-z-zsXE"
+          "current_key": "AIzaSyDIBisvWdN2WMURXKCvARq4yY6GRj__xQE"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "1001788466696-orevna12vs6p0f8i5krjkt1sksec1uei.apps.googleusercontent.com",
+              "client_id": "252900163423-0nrutl0r470annpvd70ct1v50n62vgt9.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "252900163423-76ht86kkgs5ealn8did66djonid70qbu.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.ieatta"
+              }
             }
           ]
         }
