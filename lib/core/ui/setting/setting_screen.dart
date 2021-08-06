@@ -64,8 +64,8 @@ class SettingScreen extends StatelessWidget {
     showPlatformDialog(
         context: context,
         builder: (_) => PlatformAlertDialog(
-              android: (_) => MaterialAlertDialogData(
-                  backgroundColor: Theme.of(context).appBarTheme.color),
+              // android: (_) => MaterialAlertDialogData(
+              //     backgroundColor: Theme.of(context).appBarTheme.color),
               title: Text(
                   AppLocalizations.of(context).translate("alertDialogTitle")),
               content: Text(

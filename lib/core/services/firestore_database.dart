@@ -52,29 +52,29 @@ class FirestoreDatabase {
 
   //Method to mark all todoModel to be complete
   Future<void> setAllTodoComplete() async {
-    final batchUpdate = Firestore.instance.batch();
+    final batchUpdate = FirebaseFirestore.instance.batch();
 
-    final querySnapshot = await Firestore.instance
-        .collection(FirestorePath.todos(uid))
-        .getDocuments();
-
-    for (DocumentSnapshot ds in querySnapshot.documents) {
-      batchUpdate.updateData(ds.reference, {'complete': true});
-    }
+    // final querySnapshot = await FirebaseFirestore.instance
+    //     .collection(FirestorePath.todos(uid))
+    //     .getDocuments();
+    //
+    // for (DocumentSnapshot ds in querySnapshot.documents) {
+    //   batchUpdate.updateData(ds.reference, {'complete': true});
+    // }
     await batchUpdate.commit();
   }
 
   Future<void> deleteAllTodoWithComplete() async {
-    final batchDelete = Firestore.instance.batch();
+    final batchDelete = FirebaseFirestore.instance.batch();
 
-    final querySnapshot = await Firestore.instance
-        .collection(FirestorePath.todos(uid))
-        .where('complete', isEqualTo: true)
-        .getDocuments();
-
-    for (DocumentSnapshot ds in querySnapshot.documents) {
-      batchDelete.delete(ds.reference);
-    }
+    // final querySnapshot = await FirebaseFirestore.instance
+    //     .collection(FirestorePath.todos(uid))
+    //     .where('complete', isEqualTo: true);
+    //     // .getDocuments();
+    //
+    // for (DocumentSnapshot ds in querySnapshot.documents) {
+    //   batchDelete.delete(ds.reference);
+    // }
     await batchDelete.commit();
   }
 }

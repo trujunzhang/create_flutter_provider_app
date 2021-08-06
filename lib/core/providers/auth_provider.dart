@@ -38,18 +38,18 @@ class AuthProvider extends ChangeNotifier {
   Status get status => _status;
 
   Stream<AuthUserModel> get user =>
-      _auth.onAuthStateChanged.map(_userFromFirebase);
+      _auth.authStateChanges().map(_userFromFirebase);
 
   AuthProvider() {
     //initialise object
     _auth = FirebaseAuth.instance;
 
     //listener for authentication changes such as user sign in and sign out
-    _auth.onAuthStateChanged.listen(onAuthStateChanged);
+    _auth.authStateChanges().listen(onAuthStateChanged);
   }
 
   //Create user object based on the given FirebaseUser
-  AuthUserModel _userFromFirebase(FirebaseUser user) {
+  AuthUserModel _userFromFirebase(User user) {
     if (user == null) {
       return null;
     }
@@ -59,11 +59,11 @@ class AuthProvider extends ChangeNotifier {
         email: user.email ?? "",
         displayName: user.displayName,
         phoneNumber: user.phoneNumber,
-        photoUrl: user.photoUrl);
+        photoUrl: user.photoURL);
   }
 
   //Method to detect live auth changes such as user sign in and sign out
-  Future<void> onAuthStateChanged(FirebaseUser firebaseUser) async {
+  Future<void> onAuthStateChanged(User firebaseUser) async {
     if (firebaseUser == null) {
       _status = Status.Unauthenticated;
     } else {
@@ -79,7 +79,7 @@ class AuthProvider extends ChangeNotifier {
     try {
       _status = Status.Registering;
       notifyListeners();
-      final AuthResult result = await _auth.createUserWithEmailAndPassword(
+      final UserCredential result = await _auth.createUserWithEmailAndPassword(
           email: email, password: password);
 
       return _userFromFirebase(result.user);
@@ -113,7 +113,7 @@ class AuthProvider extends ChangeNotifier {
       notifyListeners();
       GoogleSignInAccount googleUser = await _googleSignIn.signIn();
       GoogleSignInAuthentication googleAuth = await googleUser.authentication;
-      final AuthCredential credential = GoogleAuthProvider.getCredential(
+      final AuthCredential credential = GoogleAuthProvider.credential(
         accessToken: googleAuth.accessToken,
         idToken: googleAuth.idToken,
       );
