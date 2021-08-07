@@ -54,27 +54,27 @@ class FirestoreDatabase {
   Future<void> setAllTodoComplete() async {
     final batchUpdate = FirebaseFirestore.instance.batch();
 
-    // final querySnapshot = await FirebaseFirestore.instance
-    //     .collection(FirestorePath.todos(uid))
-    //     .getDocuments();
-    //
-    // for (DocumentSnapshot ds in querySnapshot.documents) {
-    //   batchUpdate.updateData(ds.reference, {'complete': true});
-    // }
+    final querySnapshot = await FirebaseFirestore.instance
+        .collection(FirestorePath.todos(uid))
+        .get();
+
+    for (DocumentSnapshot ds in querySnapshot.docs) {
+      batchUpdate.update(ds.reference, {'complete': true});
+    }
     await batchUpdate.commit();
   }
 
   Future<void> deleteAllTodoWithComplete() async {
     final batchDelete = FirebaseFirestore.instance.batch();
 
-    // final querySnapshot = await FirebaseFirestore.instance
-    //     .collection(FirestorePath.todos(uid))
-    //     .where('complete', isEqualTo: true);
-    //     // .getDocuments();
-    //
-    // for (DocumentSnapshot ds in querySnapshot.documents) {
-    //   batchDelete.delete(ds.reference);
-    // }
+    final querySnapshot = await FirebaseFirestore.instance
+        .collection(FirestorePath.todos(uid))
+        .where('complete', isEqualTo: true)
+        .get();
+
+    for (DocumentSnapshot ds in querySnapshot.docs) {
+      batchDelete.delete(ds.reference);
+    }
     await batchDelete.commit();
   }
 }
